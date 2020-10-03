@@ -3,7 +3,7 @@
 > Este proyecto es una Plantilla de apoyo docente de la asignatura.
 ##code status
 [![Build Status](https://travis-ci.com/yicheng-Pan/iwvg-devops-yicheng-pan.svg?branch=develop)](https://travis-ci.com/yicheng-Pan/iwvg-devops-yicheng-pan)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-devops-yicheng-pan&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-devops-yicheng-pan)
 
 
 ### :gear: Instalación del proyecto
