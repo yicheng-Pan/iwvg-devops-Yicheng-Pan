@@ -34,5 +34,11 @@ public class Searches {
                         .anyMatch(fraction -> fraction.isImproper(fraction.getNumerator(),fraction.getDenominator())))
                         .map(User::getName);
     }
-
+    public Stream<String> findUserFamilyNameByAllNegativeSignFractionDistinct(){
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream()
+                        .anyMatch(fraction -> fraction.getNumerator()<0||fraction.getDenominator()<0))
+                .map(User::getFamilyName)
+                .distinct();
+    }
 }
