@@ -37,6 +37,11 @@ class SearchesTest {
         assertEquals(List.of("Blanco","López"), new Searches().findUserFamilyNameByAllNegativeSignFractionDistinct()
                 .collect(Collectors.toList()));
     }
+    @Test
+    void testFindDecimalImproperFractionByUserName() {
+        assertEquals(List.of(-0.2), new Searches().findDecimalImproperFractionByUserName("Ana")
+                .collect(Collectors.toList()));
+    }
 
 
 }
