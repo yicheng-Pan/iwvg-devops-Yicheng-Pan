@@ -1,6 +1,7 @@
 package es.upm.miw.iwvg_devops;
 
 import java.util.List;
+import java.util.stream.Collector;
 
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el denominador
@@ -87,6 +88,7 @@ public class Fraction {
         return result;
 
     }
+
 
     public boolean isProper(int numerator, int denominator) {
         return  numerator > denominator;
