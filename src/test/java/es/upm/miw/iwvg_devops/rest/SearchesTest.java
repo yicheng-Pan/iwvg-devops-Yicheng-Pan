@@ -42,6 +42,11 @@ class SearchesTest {
         assertEquals(List.of(-0.2), new Searches().findDecimalImproperFractionByUserName("Ana")
                 .collect(Collectors.toList()));
     }
+    @Test
+    void testFindHighestFraction() {
+        assertEquals(List.of(), new Searches().findDecimalImproperFractionByUserName()
+                .collect(Collectors.toList()));
+    }
 
 
 }

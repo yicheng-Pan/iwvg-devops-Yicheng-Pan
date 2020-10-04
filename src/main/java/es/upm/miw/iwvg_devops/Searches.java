@@ -2,6 +2,7 @@ package es.upm.miw.iwvg_devops;
 
 import org.apache.logging.log4j.LogManager;
 
+import java.util.Comparator;
 import java.util.stream.Stream;
 
 public class Searches {
@@ -49,4 +50,12 @@ public class Searches {
 
 
     }
+    public Fraction findHighestFraction(){
+        return (Fraction) new UsersDatabase().findAll()
+                .map(fraction -> fraction.getFractions());
+
+
+
+    }
+
 }
