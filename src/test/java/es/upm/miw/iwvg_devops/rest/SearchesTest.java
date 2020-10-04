@@ -39,7 +39,7 @@ class SearchesTest {
     }
     @Test
     void testFindDecimalImproperFractionByUserName() {
-        assertEquals(List.of(-0.2), new Searches().findDecimalImproperFractionByUserName("Ana")
+        assertEquals(List.of(2.0, -0.2, 0.5, 1.3333333333333333), new Searches().findDecimalImproperFractionByUserName("Ana")
                 .collect(Collectors.toList()));
     }
     @Test
