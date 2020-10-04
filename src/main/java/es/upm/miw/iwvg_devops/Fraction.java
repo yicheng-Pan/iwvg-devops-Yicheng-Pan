@@ -1,5 +1,7 @@
 package es.upm.miw.iwvg_devops;
 
+import java.util.List;
+
 /**
  * Conceptos: Las fracciones propias son aquellas cuyo numerador es menor que el denominador
  * <p>
@@ -29,13 +31,13 @@ public class Fraction {
     private int numerator;
 
     private int denominator;
-
+    private Fraction fraction;
     public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
-    public Fraction() {
+    public Fraction(List<Fraction> fractions1) {
         this(1, 1);
     }
 
@@ -57,6 +59,43 @@ public class Fraction {
 
     public double decimal() {
         return (double) numerator / denominator;
+    }
+
+    public Fraction add(Fraction fraction) {
+        int num= fraction.getNumerator();
+        int den= fraction.getDenominator();
+        int newNumerator=numerator*den + denominator*num;
+        int newDenominator=denominator*den;
+        Fraction result = new Fraction(newNumerator,newDenominator);
+        return result;
+
+    }
+    public Fraction multiply (Fraction fraction) {
+        int num= fraction.getNumerator();
+        int den= fraction.getDenominator();
+        int newNumerator=numerator*num;
+        int newDenominator=numerator*den;
+        Fraction result = new Fraction(newNumerator,newDenominator);
+        return result;
+    }
+    public Fraction divide(Fraction fraction) {
+        int num= fraction.getNumerator();
+        int den= fraction.getDenominator();
+        int newNumerator=numerator*den;
+        int newDenominator=numerator*num;
+        Fraction result = new Fraction(newNumerator,newDenominator);
+        return result;
+
+    }
+
+    public boolean isProper(int numerator, int denominator) {
+        return  numerator > denominator;
+    }
+    public boolean isImproper(int numerator, int denominator) {
+        return  numerator < denominator;
+    }
+    public boolean isEquivalent(int numerator, int denominator) {
+        return  numerator == denominator;
     }
 
     @Override
